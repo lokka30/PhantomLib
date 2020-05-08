@@ -1,0 +1,25 @@
+name: ${project.name}
+description: ${project.description}
+version: ${project.version}
+api-version: '1.13'
+author: 'lokka30'
+
+main: io.github.lokka30.phantomlib.PhantomLib
+prefix: 'PhantomLib'
+load: STARTUP
+
+commands:
+  phantomlib:
+    description: 'View plugin information or reload the config.yml file.'
+    usage: /<command>
+    alisaes: [plib]
+
+permissions:
+  phantomlib.*:
+    description: 'Access to all PhantomLib perms'
+    default: op
+    children:
+      phantomlib.reload: true
+  phantomlib.reload:
+    description: 'Access to /phantomlib reload'
+    default: op

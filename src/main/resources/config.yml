@@ -1,0 +1,3 @@
+# Should PHantomLib check for updates?
+# Expected: [Boolean], Default: [true]
+use-update-checker: true
