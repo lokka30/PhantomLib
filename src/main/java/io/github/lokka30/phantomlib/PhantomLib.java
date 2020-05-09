@@ -63,8 +63,7 @@ public class PhantomLib extends JavaPlugin {
         if (getConfig().contains("use-update-checker")) {
             if (getConfig().getBoolean("use-update-checker")) {
                 phantomLogger.log(LogLevel.INFO, "&b&lPhantomLib: &8(&3Update Checker&8) &7", "Checking for updates...");
-                //TODO CHANGE RESOURCE ID
-                new UpdateChecker(this, 12345).getVersion(version -> {
+                new UpdateChecker(this, 78556).getVersion(version -> {
                     final String currentVersion = getDescription().getVersion();
 
                     if (currentVersion.equals(version)) {

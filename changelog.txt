@@ -1,2 +1,5 @@
 v1.0.0-ALPHA:
 - Initial Release
+
+v1.0.1-ALPHA:
+- Fix | Updated 'resourceID' so update checker works properly.
