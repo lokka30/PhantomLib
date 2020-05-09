@@ -40,7 +40,7 @@ public class PhantomLib extends JavaPlugin {
         registerCommands();
 
         phantomLogger.log(LogLevel.INFO, "&b&lPhantomLib: &8(&3Startup &8- &34&8/&34&8) &7", "Registering metrics...");
-        new Metrics(this, 12345);
+        new Metrics(this, 7454);
 
         final long timeTaken = System.currentTimeMillis() - timeStart;
         phantomLogger.log(LogLevel.INFO, "&b&lPhantomLib: &8(&3Startup&8) &7", "&8+---+ &f(Enable Complete, took &b" + timeTaken + "ms&f) &8+---+");
