@@ -7,6 +7,7 @@ import io.github.lokka30.phantomlib.classes.UpdateChecker;
 import io.github.lokka30.phantomlib.commands.PhantomLibCommand;
 import io.github.lokka30.phantomlib.enums.LogLevel;
 import io.github.lokka30.phantomlib.listeners.PlayerMoveListener;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -29,14 +30,17 @@ public class PhantomLib extends JavaPlugin {
         phantomLogger.log(LogLevel.INFO, "&b&lPhantomLib: &8(&3Startup&8) &7", "&8+---+ &f(Enable Started) &8+---+");
         final long timeStart = System.currentTimeMillis();
 
-        phantomLogger.log(LogLevel.INFO, "&b&lPhantomLib: &8(&3Startup &8- &31&8/&33&8) &7", "Loading '&bconfig.yml&7'...");
+        phantomLogger.log(LogLevel.INFO, "&b&lPhantomLib: &8(&3Startup &8- &31&8/&34&8) &7", "Loading '&bconfig.yml&7'...");
         saveDefaultConfig();
 
-        phantomLogger.log(LogLevel.INFO, "&b&lPhantomLib: &8(&3Startup &8- &32&8/&33&8) &7", "Registering events...");
+        phantomLogger.log(LogLevel.INFO, "&b&lPhantomLib: &8(&3Startup &8- &32&8/&34&8) &7", "Registering events...");
         registerEvents();
 
-        phantomLogger.log(LogLevel.INFO, "&b&lPhantomLib: &8(&3Startup &8- &33&8/&33&8) &7", "Registering commands...");
+        phantomLogger.log(LogLevel.INFO, "&b&lPhantomLib: &8(&3Startup &8- &33&8/&34&8) &7", "Registering commands...");
         registerCommands();
+
+        phantomLogger.log(LogLevel.INFO, "&b&lPhantomLib: &8(&3Startup &8- &34&8/&34&8) &7", "Registering metrics...");
+        new Metrics(this, 12345);
 
         final long timeTaken = System.currentTimeMillis() - timeStart;
         phantomLogger.log(LogLevel.INFO, "&b&lPhantomLib: &8(&3Startup&8) &7", "&8+---+ &f(Enable Complete, took &b" + timeTaken + "ms&f) &8+---+");
