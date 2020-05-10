@@ -18,8 +18,16 @@ public class PhantomLib extends JavaPlugin {
     private MessageMethods messageMethods;
     private PhantomLogger phantomLogger;
 
+    private static PhantomLib instance;
+
+    public static PhantomLib getInstance() {
+        return instance;
+    }
+
     @Override
     public void onLoad() {
+        instance = this;
+
         this.commandRegister = new CommandRegister();
         this.messageMethods = new MessageMethods();
         this.phantomLogger = new PhantomLogger();
