@@ -6,10 +6,10 @@
 
     <groupId>io.github.lokka30</groupId>
     <artifactId>PhantomLib</artifactId>
-    <version>1.0.2-ALPHA</version>
+    <version>1.0.3-SNAPSHOT</version>
 
     <name>PhantomLib</name>
-    <description>Common libraries</description>
+    <description>Common libraries that other plugins can utilise.</description>
 
     <packaging>jar</packaging>
     <properties>
@@ -81,7 +81,7 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.15.2-R0.1-SNAPSHOT</version>
+            <version>1.16.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

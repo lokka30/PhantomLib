@@ -14,6 +14,15 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class PhantomLib extends JavaPlugin {
 
+    /*
+    TODO LIST
+- BossBarAPI ? is it needed ?
+- TitleAPI ? is it needed ?
+- TabListAPI
+- AnimationAPI ? is it needed ?
+- ClaimCheckAPI: Checks if block or location is claimed
+     */
+
     private CommandRegister commandRegister;
     private MessageMethods messageMethods;
     private PhantomLogger phantomLogger;

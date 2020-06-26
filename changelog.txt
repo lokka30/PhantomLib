@@ -6,3 +6,11 @@ v1.0.1-ALPHA:
 
 v1.0.2-ALPHA:
 - Addition | Added 'getInstance' method to main class so it can be accessed.
+
+v1.0.3-SNAPSHOT:
+- Note | Plugin moved from 'ALPHA' stage to 'SNAPSHOT' stage as no bugs have been found so far.
+- Improvement | Plugin now officially supports 1.16.1 (on top of the other supported versions).
+- Improivement | Plugin is now compiled in 1.16.1.
+- Addition | Added 'MathUtils' class, containing 'chance of' and 'generate random number between' methods
+- Addition | Added 'LocationUtils' class, containing 'get distance between two blocks' methods
+- Addition | Added 'send action bar' methods to MessageMethods
