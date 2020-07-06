@@ -6,7 +6,7 @@
 
     <groupId>io.github.lokka30</groupId>
     <artifactId>PhantomLib</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.4-RELEASE</version>
 
     <name>PhantomLib</name>
     <description>Common libraries that other plugins can utilise.</description>

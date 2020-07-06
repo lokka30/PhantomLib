@@ -14,3 +14,7 @@ v1.0.3-SNAPSHOT:
 - Addition | Added 'MathUtils' class, containing 'chance of' and 'generate random number between' methods
 - Addition | Added 'LocationUtils' class, containing 'get distance between two blocks' methods
 - Addition | Added 'send action bar' methods to MessageMethods
+
+v1.0.4-RELEASE:
+- Note | Plugin has moved from 'SNAPSHOT' to 'RELEASE' stage as no bugs have been found so far.
+- Addition | Thanks to SpigotMC users Sullivan_Bognar and imDaniX for providing their code - 1.16 hex color translation has been added to the MessageMethods class. This means that all resources which use PhantomLib (e.g. LevelledMobs and PAPIChatFormatter) AND servers that also run 1.16+ will be able to utilise these codes. For example, in PAPIChatFormatter, you can now use hex color codes in your chat format.

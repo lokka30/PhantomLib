@@ -15,7 +15,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class PhantomLib extends JavaPlugin {
 
     /*
-    TODO LIST
+    To-do list
 - BossBarAPI ? is it needed ?
 - TitleAPI ? is it needed ?
 - TabListAPI

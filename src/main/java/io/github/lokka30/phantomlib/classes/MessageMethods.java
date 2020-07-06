@@ -5,6 +5,11 @@ import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import static net.md_5.bungee.api.ChatColor.COLOR_CHAR;
+
 @SuppressWarnings("unused")
 public class MessageMethods {
 
@@ -12,13 +17,37 @@ public class MessageMethods {
     }
 
     /**
-     * This method will translate colour codes (e.g. &a) in the specified message.
+     * This method will translate color codes (e.g. &a) in the specified message. It will also translate hex color codes (e.g. &#123456).
      *
-     * @param msg the message which should have colour codes translated
+     * @param message the message which should have colour codes translated
      * @return the translated string
      */
-    public String colorize(final String msg) {
-        return ChatColor.translateAlternateColorCodes('&', msg);
+    public String colorize(final String message) {
+        return ChatColor.translateAlternateColorCodes('&', translateHexColorCodes("&#", "", message));
+    }
+
+    /**
+     * This method will translate HEX colour codes (e.g. 123456) in the specified message.
+     * Full credit to Sullivan_Bognar and imDaniX on SpigotMC for creating this method.
+     *
+     * @param startTag what the tag should begin with - '&#' is recommended
+     * @param endTag   what the tag should end with - '' (nothing) is recommended
+     * @param message  the message that should be translated
+     * @return the translated string
+     */
+    public String translateHexColorCodes(String startTag, String endTag, String message) {
+        final Pattern hexPattern = Pattern.compile(startTag + "([A-Fa-f0-9]{6})" + endTag);
+        Matcher matcher = hexPattern.matcher(message);
+        StringBuffer buffer = new StringBuffer(message.length() + 4 * 8);
+        while (matcher.find()) {
+            String group = matcher.group(1);
+            matcher.appendReplacement(buffer, COLOR_CHAR + "x"
+                    + COLOR_CHAR + group.charAt(0) + COLOR_CHAR + group.charAt(1)
+                    + COLOR_CHAR + group.charAt(2) + COLOR_CHAR + group.charAt(3)
+                    + COLOR_CHAR + group.charAt(4) + COLOR_CHAR + group.charAt(5)
+            );
+        }
+        return matcher.appendTail(buffer).toString();
     }
 
     /**
